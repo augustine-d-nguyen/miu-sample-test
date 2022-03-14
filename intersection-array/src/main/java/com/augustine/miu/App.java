@@ -24,15 +24,19 @@ public class App
         }
         
         int maxIntersectionCount = first.length > second.length ? second.length : first.length;
-        int[] result = new int[maxIntersectionCount];
+        int[] container = new int[maxIntersectionCount];
 
         int counter = 0;
         for (int i = 0; i < second.length; i++) {
             for (int j = 0; j < first.length; j++) {
                 if (second[i] == first[j]) {
-                    result[counter++] = second[i];
+                    container[counter++] = second[i];
                 }
             }
+        }
+        int[] result = new int[counter];
+        for (int i = 0; i < counter; i++) {
+            result[i] = container[i];
         }
 
         return result;
