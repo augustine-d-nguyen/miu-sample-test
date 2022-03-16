@@ -10,8 +10,24 @@ public class App
 {
     public static void main( String[] args )
     {
-        int result = getPoint(new int[] {3, 1, 1, 2});
-        System.out.println( result);
+        int result = getPoint(new int[] {1,8,3,7,10,2});
+        assert 3 == result;
+
+        result = getPoint(new int[] {1, 5, 3, 1, 1, 1, 1, 1, 1});
+        assert 2 == result;
+
+        result = getPoint(new int[] {2, 1, 1, 1, 2, 1, 7});
+        assert 5 == result;
+
+        result = getPoint(new int[] {1,2,3});
+        assert -1 == result;
+
+        result = getPoint(new int[] {3,4,5,10});
+        assert -1 == result;
+
+        result = getPoint(new int[] {1,2,10,3,4});
+        assert -1 == result;
+        
     }
 
     private static int getPoint(int[] a) {
