@@ -507,6 +507,12 @@
           
     
     <module>point-of-equilibrium</module>
+
+    <module>test-01</module>
+
+    <module>test-02</module>
+
+    <module>test-03</module>
       
   </modules>
           
